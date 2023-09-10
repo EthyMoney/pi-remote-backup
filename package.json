@@ -1,0 +1,30 @@
+{
+  "name": "pi-remote-backup",
+  "version": "0.0.0",
+  "description": "A web GUI application to make and manage remote SD card image backups of Raspberry Pis.",
+  "main": "server.js",
+  "scripts": {
+    "test": "none",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EthyMoney/pi-remote-backup.git"
+  },
+  "keywords": [
+    "pi",
+    "raspberrypi",
+    "raspberry",
+    "nodejs",
+    "node",
+    "management",
+    "backup",
+    "gui"
+  ],
+  "author": "Logan (EthyMoney)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EthyMoney/pi-remote-backup/issues"
+  },
+  "homepage": "https://github.com/EthyMoney/pi-remote-backup#readme"
+}
