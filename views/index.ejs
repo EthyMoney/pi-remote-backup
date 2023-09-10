@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remote Device Backup</title>
+</head>
+
+<body>
+  <h1>Remote Device Backup</h1>
+
+  <h2>Backup Schedule</h2>
+  <form action="/set-schedule" method="POST">
+    <label for="schedule">Cron Schedule: </label>
+    <input type="text" id="schedule" name="schedule" value="<%= schedule %>">
+    <button type="submit">Set Schedule</button>
+  </form>
+
+  <h2>Devices</h2>
+  <form action="/add-device" method="POST">
+    <label for="user">Username: </label>
+    <input type="text" id="user" name="user" required>
+    <label for="ip">IP Address: </label>
+    <input type="text" id="ip" name="ip" required>
+    <label for="outputFile">Output File: </label>
+    <input type="text" id="outputFile" name="outputFile" required>
+    <button type="submit">Add Device</button>
+  </form>
+
+  <h3>Configured Devices</h3>
+  <ul>
+    <% devices.forEach(device=> { %>
+      <li>User: <%= device.user %>, IP: <%= device.ip %>, Output File: <%= device.outputFile %>
+      </li>
+      <% }) %>
+  </ul>
+</body>
+
+</html>
